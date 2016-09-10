@@ -1,0 +1,187 @@
+package ConditionalPack;
+
+public class DoWhile 
+{
+
+	public static void main(String[] args)
+	{
+		int i =1;
+		do
+		{
+			System.out.println(i+".Welcome to Saibersys:");
+			i++;
+		}
+		while(i>=10);
+		// TODO Auto-generated method stub
+
+	}
+
+}
+-----------------------------------------------------------
+package ConditionalPack;
+
+public class ElseIfExample 
+{
+
+	public static void main(String[] args) 
+	{
+		int n =0;
+		if (n>0)
+		{
+			System.out.println("The number is +ve");
+		}
+		else if(n<0)
+		{
+			System.out.println("The number is -ve");
+		}
+		else
+		{
+			System.out.println("The given number is zero");
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}
+---------------------------------------------------------------------
+package ConditionalPack;
+
+public class For 
+{
+
+	public static void main(String[] args)
+	{
+		
+		for(int i=1,m=10;i<m;i++)
+		{
+			System.out.println("Welcome to Saibersys");
+			System.out.println("Welcome to Us");
+			System.out.println("Welcome to m");
+		}
+			
+		// TODO Auto-generated method stub
+
+	}
+
+}
+-------------------------------------------------------------------
+package ConditionalPack;
+
+public class IfelseExample
+{
+
+	public static void main(String[] args) 
+	{
+		int i = 11;
+		if (i%2==0)
+		{
+			System.out.println("The number given is even:");
+		}
+		else
+		{
+			System.out.println("The number given is odd:");
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}
+-----------------------------------------------------------------
+package ConditionalPack;
+
+public class IfExample 
+{
+	
+	public static void main(String[] args)
+	
+	{
+	    int  i = 100;
+		if(i>0)
+		{
+		System.out.println("Welcome to Saibersys:");
+		}
+	}
+
+}
+---------------------------------------------------------------------------
+package ConditionalPack;
+
+public class NestedIf
+{
+
+	public static void main(String[] args) 
+	{
+		int n =11;
+		if (n==0)
+		{
+			System.out.println("The given no. is zero");
+		}
+		else
+		{
+			if (n%2==1)
+			{
+				System.out.println("The given no. is odd");
+			}
+			else
+			{
+				System.out.println("The given no. is even");
+			}
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}
+--------------------------------------------------------------------------
+package ConditionalPack;
+
+public class Switch 
+{
+
+	public static void main(String[] args) 
+	{
+		int Menu=1;
+		switch(Menu)
+		{
+		case 1: 
+			System.out.println("EnterPinNumber");
+			break;
+		case 2:
+			System.out.println("CheckTransactions");
+			break;
+		case 3:
+			System.out.println("PrintBill");
+			break;
+		case 4:
+			System.out.println("SendEmailConformation&PrintBill");
+			break;
+		case 5:
+			System.out.println("SendTrasactionToEmail");
+			break;
+		default:
+			System.out.println("Invalid Input");
+		}
+
+	}
+
+}
+----------------------------------------------------------------------------------
+package ConditionalPack;
+
+public class While
+{
+
+	public static void main(String[] args) 
+	{
+		int i = 1;
+		while(i<=10)
+		{
+			System.out.println("Welcome to Saibersys");
+			i++;
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}
+--------------------------------------------------------------------------------

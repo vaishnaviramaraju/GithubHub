@@ -1,0 +1,34 @@
+package Overload;
+
+public class AreaExample
+{
+	public double Area(int r)
+	{
+		double a=3.14*r*r;
+		return a;
+	}
+	public double Area(int l, int b)
+	{
+		double a = l*b;
+		return b;
+	}
+}
+-----------------------------------------------------
+package Overload;
+
+public class MainClass 
+{
+
+	public static void main(String[] args)
+	{
+		AreaExample obj=new AreaExample();
+		
+		System.out.println(" Area of the circle : "+obj.Area(20));
+		System.out.println("Area of the rectangle : "+obj.Area(10, 20));
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+-------------------------------------------------

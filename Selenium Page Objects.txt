@@ -1,0 +1,123 @@
+//Selenium Page Objects//
+-----------------------------------------------------------------------
+package examplePack;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class DropDownListExample 
+{
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		WebDriver d = new FirefoxDriver();
+		d.get("http://newtours.demoaut.com");
+		//send the username//
+		Thread.sleep(5000);
+		d.findElement(By.name("userName")).sendKeys("ysh");
+		//send pwd//
+		Thread.sleep(5000);
+		d.findElement(By.name("password")).sendKeys("yshraj@143");
+		//click on sign in button//
+		Thread.sleep(5000);
+		d.findElement(By.name("login")).click();
+		// select the dropdonwlist		
+		Thread.sleep(5000);	
+		Select drp=new Select(d.findElement((By.name("fromPort"))));
+				
+		// select options
+		Thread.sleep(5000);	
+		drp.selectByValue("London");
+				
+		Thread.sleep(5000);	
+		drp.selectByIndex(4);
+				
+				
+		Thread.sleep(5000);	
+		drp.selectByValue("Sydney");
+		
+
+	}
+
+}
+--------------------------------------------------------------------
+package examplePack;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class DuplicateObjects
+{
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		
+		WebDriver d=new FirefoxDriver();
+		
+		d.get("http://www.infibeam.com/");
+		
+		// click on login & registeration
+		Thread.sleep(5000);
+		d.findElement(By.id("loginlink")).click();
+		
+		// click on create account button
+		Thread.sleep(5000);
+		d.findElement(By.id("new-account-btn")).click();
+		
+		
+	   Thread.sleep(5000);
+	   List<WebElement> e=d.findElements(By.id("password"));
+	   
+	   Thread.sleep(5000);
+	   e.get(0).sendKeys("abcd");
+	   
+	   Thread.sleep(5000);	   
+	   e.get(1).sendKeys("ab");
+		// TODO Auto-generated method stub
+
+	}
+
+}
+-----------------------------------------------------------------------
+package examplePack;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class RadioButtonExample
+{
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		WebDriver d = new FirefoxDriver();
+		d.get("http://newtours.demoaut.com");
+		//send the username//
+		Thread.sleep(5000);
+		d.findElement(By.name("userName")).sendKeys("ysh");
+		//send pwd//
+		Thread.sleep(5000);
+		d.findElement(By.name("password")).sendKeys("yshraj@143");
+		//click on sign in button//
+		Thread.sleep(5000);
+		d.findElement(By.name("login")).click();
+		//select radiobuttons//
+		Thread.sleep(5000);
+		d.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td[2]/b/font")).click();
+		//select roundtrip//
+		Thread.sleep(5000);
+		d.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td[2]/b/font]")).click();
+		
+		//
+		// TODO Auto-generated method stub
+
+	}
+
+}
+--------------------------------------------------------------------------

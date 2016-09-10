@@ -1,0 +1,86 @@
+package Javaseleniumpack;
+
+public class Employee
+{
+	//to give the class members variables//
+ public int eno;
+ public String ename;
+ public double salary;
+  //to give the class member functions//
+ 	public void inputdetails(int prm_eno, String prm_ename, double prm_salary)
+ 	{
+ 		eno = prm_eno;
+ 		ename = prm_ename;
+ 		salary = prm_salary;
+ 	}
+ 	 public void display()//to display values//
+ 	{
+ 		System.out.println("Employee Details");
+ 		System.out.println("----------------");
+ 		System.out.println("No:"+eno);
+ 		System.out.println("Name:"+ename);
+ 		System.out.println("Salary:"+salary);
+ 	}
+ 	
+ 	public static void main(String[] args) 
+	
+	{
+		//to give class reference//
+	Employee eobj = new Employee();
+	eobj.inputdetails(1000,"Raju",25000);
+	eobj.display();
+	eobj.inputdetails(2000,"Rani",35000);
+	eobj.display();
+	eobj.inputdetails(3000,"Rahul",45000);
+	eobj.display();
+	}
+
+}
+-----------------------------------------------------------------------------------------
+package Javaseleniumpack;
+
+public class Students 
+{
+	int S_No;	//to declare class member variables//
+	String S_Name;
+	String S_Subject;
+	double S_Marks;
+	
+	
+	public void input(int prm_SNO, String prm_SName, String prm_SSubject, double prm_SMarks)
+	{
+		S_No=prm_SNO;
+		S_Name = prm_SName;
+		S_Subject = prm_SSubject;
+		S_Marks = prm_SMarks;
+	}
+	public void display()
+	{
+		System.out.println("Student Details");
+		System.out.println("***************");
+		System.out.println("S_No:"+S_No);
+		System.out.println("S_Name:"+S_Name);
+		System.out.println("S_Subject:"+S_Subject);
+		System.out.println("S_Marks:"+S_Marks);
+		System.out.println("================");
+		
+	}
+	public static void main(String[] args)
+	{
+		Students sobj = new Students();
+		sobj.input(1, "Kevin", "Maths", 100);
+		sobj.display();
+		sobj.input(2, "Bob", "Maths", 98);
+		sobj.display();
+		sobj.input(3, "Stuart", "Maths", 100);
+		sobj.display();
+		sobj.input(4, "Norbert", "Maths", 99);
+		sobj.display();
+		sobj.input(5, "Scarlet", "Maths", 75);
+		sobj.display();
+		
+
+	}
+
+}
+------------------------------------------------------------------------------

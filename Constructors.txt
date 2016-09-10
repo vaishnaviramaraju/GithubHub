@@ -1,0 +1,179 @@
+
+public class ArgumentConstructor 
+{
+	int eno;
+	String ename;
+	double Salary;
+	
+	public ArgumentConstructor(int x, String y, double z)
+	{
+		eno = x;
+		ename = y;
+		Salary = z;
+	}
+	public void displaydetails()
+	{
+		System.out.println("EmployeeDetails:");
+		System.out.println("----------------");
+		System.out.println("ENO:" +eno);
+		System.out.println("ENAME:" +ename);
+		System.out.println("ESALARY:" +Salary);
+	}
+	public static void main(String[] args) 
+	{
+		ArgumentConstructor obj = new ArgumentConstructor(100, "Raju", 25000);
+		obj.displaydetails();
+		
+		
+	}
+
+}
+-----------------------------------------------------------------------------------
+public class CopyConstructor
+{
+	//class member variable//
+			int eno;
+			String ename;
+			double Salary;
+			
+			public CopyConstructor()	//default//
+			{
+				eno = 10;
+				ename = "Raju";
+				Salary = 39000;		
+				
+			}
+			public CopyConstructor(int x, String y, double z)	//Arguments//
+			{
+				eno = x;
+				ename = y;
+				Salary = z;		
+			}
+			public CopyConstructor(CopyConstructor x)	//copy//
+			{
+				eno = x.eno;
+				ename = x.ename;
+				Salary = x.Salary;		
+			}
+			public void display()
+			{
+				System.out.println("EmployeeDetails:");
+				System.out.println("----------------");
+				System.out.println("ENO:" +eno);
+				System.out.println("ENAME:" +ename);
+				System.out.println("ESALARY:" +Salary);
+			}
+	public static void main(String[] args) 
+	{
+		CopyConstructor obj1 = new CopyConstructor();
+		CopyConstructor obj2 = new CopyConstructor(100,"Raju",2500);
+		CopyConstructor obj3 = new CopyConstructor(obj1);
+		
+		//calling the function//
+		obj1.display();
+		obj2.display();
+		obj3.display();
+	}
+
+}
+------------------------------------------------------------------------------------
+
+public class DefaultConstructor
+{
+	int eno;
+	String ename;
+	double Salary;
+	
+	public DefaultConstructor()	//Store values//
+	{
+		eno = 100;
+		ename = "raju";
+		Salary = 25000;
+	}
+	public void DisplayDetails()	//Display values//
+	{
+		System.out.println("EmployeeDetails:");
+		System.out.println("----------------");
+		System.out.println("ENO:" +eno);
+		System.out.println("ENAME:" +ename);
+		System.out.println("ESALARY:" +Salary);
+	}
+
+	public static void main(String[] args) 
+	{
+		
+		DefaultConstructor obj = new DefaultConstructor();
+		obj.DisplayDetails();
+		
+	}
+
+}
+------------------------------------------------------------------------------
+
+public class EmployeesInterfaceExample implements Interface
+{
+
+	public static void main(String[] args)
+	{
+		
+		EmployeesInterfaceExample obj = new EmployeesInterfaceExample();
+		obj.display();
+		
+		// TODO Auto-generated method stub
+	}
+	@Override
+	public void display()
+	{
+		System.out.println("Hi");
+	}
+
+}
+-------------------------------------------------------------------------------
+
+public class Overload
+{
+	int eno;
+	String ename;
+	double Salary;
+	
+	public Overload()	//default//
+	{
+		eno = 10;
+		ename = "Raju";
+		Salary = 39000;		
+		
+	}
+	public Overload(int x, String y, double z)	//Arguments//
+	{
+		eno = x;
+		ename = y;
+		Salary = z;		
+	}
+	public Overload(Overload x)	//copy//
+	{
+		eno = x.eno;
+		ename = x.ename;
+		Salary = x.Salary;		
+	}
+	public void display()
+	{
+		System.out.println("EmployeeDetails:");
+		System.out.println("----------------");
+		System.out.println("ENO:" +eno);
+		System.out.println("ENAME:" +ename);
+		System.out.println("ESALARY:" +Salary);
+	}
+	public static void main(String[] args)
+	{
+		Overload obj1 = new Overload();
+		Overload obj2 = new Overload(100,"Raju",2500);
+		Overload obj3 = new Overload(obj1);
+		
+		//calling the function//
+		obj1.display();
+		obj2.display();
+		obj3.display();
+	}
+
+}
+-----------------------------------------------------------------------------
